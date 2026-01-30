@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+rembg
+python-multipart
+Pillow
+google-generativeai
+aiofiles
+onnxruntime

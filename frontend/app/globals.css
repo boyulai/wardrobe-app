@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 70, 65, 60; /* 深灰棕色 */
+  --background-start-rgb: 249, 248, 244; /* 米白色 */
+  --background-end-rgb: 245, 245, 240; /* 淺米色 */
+  --accent-color: 140, 130, 115; /* 灰棕色 */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-start-rgb));
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Microsoft JhengHei", sans-serif;
+}
+
+/* MUJI Style Utilities */
+.bg-muji-base {
+  background-color: #F9F8F4;
+}
+
+.bg-muji-card {
+  background-color: #FFFFFF;
+}
+
+.text-muji-primary {
+  color: #46413C;
+}
+
+.text-muji-secondary {
+  color: #8C8273;
+}
+
+.border-muji {
+  border-color: #E6E3D8;
+}
+
+.btn-muji-primary {
+  background-color: #7F0019; /* MUJI Red for primary actions */
+  color: white;
+}
+
+.btn-muji-secondary {
+  background-color: #E6E3D8;
+  color: #46413C;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #D1CEC4;
+  border-radius: 3px;
+}
