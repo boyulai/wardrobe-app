@@ -78,6 +78,14 @@ async def upload_image(
             
         # 2. Remove Background (Rembg)
         input_image = Image.open(io.BytesIO(content))
+        
+        # Resize if too large (max 1024px) to save resources
+        max_size = 1024
+        if max(input_image.size) > max_size:
+            ratio = max_size / max(input_image.size)
+            new_size = (int(input_image.size[0] * ratio), int(input_image.size[1] * ratio))
+            input_image = input_image.resize(new_size, Image.Resampling.LANCZOS)
+
         output_image = remove(input_image)
         
         # Convert to RGB (white background) from RGBA
